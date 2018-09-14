@@ -2,14 +2,15 @@ import axios from 'axios'
 axios.defaults.timeout = 5000
 axios.defaults.headers.post['Content-Type'] = 'application/json'
 axios.interceptors.request.use((config) => {
+  // request interceptors
   Object.assign(config.headers, {
-
   })
   return config
 })
 axios.interceptors.response.use((response) => {
   return response
 }, (error) => {
+  // response interceptors
   return Promise.reject(error)
 })
 
