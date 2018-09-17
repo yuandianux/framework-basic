@@ -20,6 +20,15 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: () => import('./../views/About/About.vue')
+    },
+    {
+      path: '/404',
+      name: '404',
+      component: () => import('./../views/404/NotFound.vue')
+    },
+    {
+      path: '*',
+      redirect: '/404'
     }
   ]
 })

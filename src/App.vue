@@ -13,6 +13,8 @@ export default {
   name: 'app',
   components: {
     ComHeader
+  },
+  mounted () {
   }
 }
 </script>

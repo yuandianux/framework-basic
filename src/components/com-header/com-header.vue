@@ -1,7 +1,7 @@
 <template>
   <div class="h-box">
     <div class="logo">
-      <img src="@/assets/logo.png" alt="">
+      <img src="@/common/images/logo.png" alt="">
     </div>
     <nav class="menu">
       <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router @select="_handleSelect">
@@ -33,6 +33,7 @@ export default {
   }
 }
 </script>
+
 <style lang="less" scoped>
 @import './../../common/less/base.less';
 .h-box{
