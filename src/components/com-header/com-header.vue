@@ -25,10 +25,15 @@ export default {
   },
   methods: {
     _handleSelect (index) {
+      if (this.activeIndex !== index) {
+        this.setIsLoading(true)
+      }
+      this.activeIndex = index
       this.setMsg(index)
     },
     ...mapActions([
-      'setMsg'
+      'setMsg',
+      'setIsLoading'
     ])
   }
 }

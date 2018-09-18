@@ -4,12 +4,20 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'About',
   computed: {
     ...mapGetters([
       'msg'
+    ])
+  },
+  mounted () {
+    this.setIsLoading(false)
+  },
+  methods: {
+    ...mapActions([
+      'setIsLoading'
     ])
   }
 }

@@ -1,7 +1,7 @@
-const localUrl = '/api/api/test'
-const buildUrl = 'http://0.0.0.0:0/api/test'
+const localUrl = '/api/api/v1'
+const buildUrl = 'http://172.16.124.16:9002/api/v1'
 const baseUrl = process.env.NODE_ENV === 'development' ? localUrl : buildUrl
 
 export const urls = {
-  test: `${baseUrl}/test`
+  caseSummaryList: `${baseUrl}/caseSummary/list`
 }
