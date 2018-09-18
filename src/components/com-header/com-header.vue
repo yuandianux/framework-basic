@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-import { mapActions } from 'vuex'
+import { mapMutations, mapActions } from 'vuex'
 export default {
   name: 'ComHeader',
   data () {
@@ -31,8 +31,10 @@ export default {
       this.activeIndex = index
       this.setMsg(index)
     },
+    ...mapMutations({
+      'setMsg': 'SET_MSG'
+    }),
     ...mapActions([
-      'setMsg',
       'setIsLoading'
     ])
   }
