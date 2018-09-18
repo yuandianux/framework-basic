@@ -11,6 +11,13 @@ axios.interceptors.response.use((response) => {
   return response
 }, (error) => {
   // response interceptors
+  if (error.response) {
+    switch (error.response.status) {
+      case 401:
+        console.log('401错误操作')
+        break
+    }
+  }
   return Promise.reject(error)
 })
 
